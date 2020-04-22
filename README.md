@@ -34,3 +34,11 @@ sudo systemctl start jenkins
 sudo systemctl enable jenkins
 sudo systemctl status jenkins
 ```
+
+### Further Steps 
+
+1. Install Blue Ocean & pipeline-aws" Plugin into jenkins.
+2. Set up AWS credentials in Jenkins
+3. Set up a GitHub Repository
+4. Set up S3 Bucket
+5. Trigger the scan the Repository Now option from left side bar of jenkins.
