@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Upload to AWS'){
             steps{
-                withAWS(credentials:'IDofAwsCredentials') {
+                withAWS(credentials:'aws-static') {
                     s3Upload(file:'index.html', bucket:'jenkins-test-nano', path:'/')
                 }
             }            
