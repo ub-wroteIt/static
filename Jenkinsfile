@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Build'){
+        stage('Upload to AWS'){
             steps{
                 sh 'echo "Hello World"'
                 sh '''
@@ -9,6 +9,11 @@ pipeline{
                     ls -lah
                 '''    
             }
+            withAWS(credentials:'IDofAwsCredentials') {
+                def identity=awsIdentity();//Log AWS credentials
+                s3Upload(file:'index.html', bucket:'jenkins-test-nano', path:'/')
+            }
+
         }
     }
 }
