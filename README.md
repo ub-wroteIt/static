@@ -4,7 +4,7 @@ This repository for the demo purpose. Jenkins job and functionality will be expl
 ## Requirements
 Need to have AWS account & Github account.
 
-##Installation 
+## Installation 
 setup jenkins on Ubuntu based EC2 instance. follow the following steps in order to install it on ubnuntu machine.
 ```
 # Step 1 - Update existing packages
